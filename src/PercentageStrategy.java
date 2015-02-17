@@ -8,7 +8,7 @@
  *
  * @author JKowalske2
  */
-public class PercentageStrategy implements CalculateTip{
+public class PercentageStrategy implements TipStrategy{
 
     private double billAmount;
     private double percentage;
@@ -34,11 +34,9 @@ public class PercentageStrategy implements CalculateTip{
         this.percentage = percentage;
     }
     
-    
-    
     @Override
     public double getTip() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return billAmount * (percentage / 100);
     }
     
 }

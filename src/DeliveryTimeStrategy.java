@@ -8,13 +8,14 @@
  *
  * @author JKowalske2
  */
-public class DeliveryTimeStrategy implements CalculateTip{
+public class DeliveryTimeStrategy implements TipStrategy{
     private double deliveryTime;
-    private double tipPercent;
+    private double tip;
+    private double bill;
     
-    public DeliveryTimeStrategy(double time, double percent){
+    public DeliveryTimeStrategy(double time, double bill){
         setDeliveryTime(time);
-        setTipPercent(percent);
+        setBill(bill);
     }
 
     public double getDeliveryTime() {
@@ -25,17 +26,27 @@ public class DeliveryTimeStrategy implements CalculateTip{
         this.deliveryTime = deliveryTime;
     }
 
-    public double getTipPercent() {
-        return tipPercent;
+    public double getBill() {
+        return bill;
     }
 
-    public void setTipPercent(double tipPercent) {
-        this.tipPercent = tipPercent;
+    public void setBill(double bill) {
+        this.bill = bill;
+    }
+
+    public void setTip(double tip) {
+        this.tip = tip;
     }
     
     @Override
     public double getTip() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(deliveryTime < 30){
+            tip = bill * .20;
+        }
+        else{
+            tip = bill * .10;
+        }
+        return tip;
     }
     
     
