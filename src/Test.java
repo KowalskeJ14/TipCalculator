@@ -10,10 +10,10 @@
  */
 public class Test {
     public static void main(String[] args) {
-        TipCalculator delivery = new DeliveryTimeTipStrategy(31, 55);
-        TipCalculator percent = new PercentageTipStrategy(100, 20);
+        TipCalculatorStrategy delivery = new DeliveryTimeTipStrategy(31, 55);
+        TipCalculatorStrategy percent = new PercentageTipStrategy(100, 20);
         
-//        TipCalculator[] strats = {delivery, percent};
+//        TipCalculatorStrategy[] strats = {delivery, percent};
         
 //        TipService ts = new TipService();
         

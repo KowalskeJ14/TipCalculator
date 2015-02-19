@@ -9,7 +9,7 @@
  * @author JKowalske2
  */
 public class TipService {
-    public double getTipAmount(TipCalculator ts){
+    public double getTipAmount(TipCalculatorStrategy ts){
         return ts.getTip();
     }
 }

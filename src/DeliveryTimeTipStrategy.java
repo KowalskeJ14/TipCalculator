@@ -8,7 +8,7 @@
  *
  * @author JKowalske2
  */
-public class DeliveryTimeTipStrategy implements TipCalculator{
+public class DeliveryTimeTipStrategy implements TipCalculatorStrategy{
     private double deliveryTime;
     private double tip;
     private double bill;
@@ -39,6 +39,8 @@ public class DeliveryTimeTipStrategy implements TipCalculator{
     }
     
     @Override
+//    Would get deductions for having the below hardcoded numbers in the code!!!!!
+//    As well as constants instead of variables with a value!!!!
     public double getTip() {
         if(deliveryTime < 30){
             tip = bill * .20;

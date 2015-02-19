@@ -8,6 +8,6 @@
  *
  * @author JKowalske2
  */
-public interface TipCalculator {
+public interface TipCalculatorStrategy {
     public abstract double getTip();
 }

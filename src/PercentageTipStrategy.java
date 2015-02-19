@@ -8,7 +8,7 @@
  *
  * @author JKowalske2
  */
-public class PercentageTipStrategy implements TipCalculator{
+public class PercentageTipStrategy implements TipCalculatorStrategy{
 
     private double billAmount;
     private double percentage;
