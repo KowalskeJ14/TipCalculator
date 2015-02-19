@@ -8,12 +8,12 @@
  *
  * @author JKowalske2
  */
-public class DeliveryTimeStrategy implements TipStrategy{
+public class DeliveryTimeTipStrategy implements TipCalculator{
     private double deliveryTime;
     private double tip;
     private double bill;
     
-    public DeliveryTimeStrategy(double time, double bill){
+    public DeliveryTimeTipStrategy(double time, double bill){
         setDeliveryTime(time);
         setBill(bill);
     }
